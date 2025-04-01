@@ -1,0 +1,27 @@
+.form-label span, .error-message{
+  color: red;
+}
+.login-form{
+  width: 60%;
+  padding: 20px;
+  background: #f5f5f5;
+  box-shadow: -1px 2px 7px 5px #e5e2e2;
+}
+.error-message{
+  font-size: 14px;
+}
+.container{
+  padding: 60px 0;
+}
+.page-header-title span{
+  font-weight: 400;
+    font-size: 15px;
+    background: bisque;
+}
+table td{
+  vertical-align: middle;
+}
+.card-body img{
+  width: 50%;
+height: 50%;
+}    
