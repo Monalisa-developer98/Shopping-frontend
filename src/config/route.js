@@ -4,6 +4,7 @@ import Login from '../components/Login/Login';
 import Register from '../components/Register/Register'
 import UserDashboard from '../components/UserDashboard/UserDashboard'
 import AdminDashboard from '../components/AdminDashboard/AdminDashboard'
+import Subscription from '../components/Subscription/Subscription'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -25,6 +26,7 @@ const MainRoute = () => {
         <Route path="/register" element={<Register />}></Route>
         <Route path="/user-dashboard" element={<UserDashboard />}></Route>
         <Route path="/admin-dashboard" element={<AdminDashboard />}></Route>
+        <Route path="/subscription" element={<Subscription />}></Route>
       </Routes>
     </BrowserRouter>
     </div>
