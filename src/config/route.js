@@ -7,6 +7,7 @@ import AdminDashboard from '../components/AdminDashboard/AdminDashboard'
 import Subscription from '../components/Subscription/Subscription'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SubscriptionForm from "../components/Subscription/SubscriptionForm"
 
 const MainRoute = () => {
   return (
@@ -27,6 +28,7 @@ const MainRoute = () => {
         <Route path="/user-dashboard" element={<UserDashboard />}></Route>
         <Route path="/admin-dashboard" element={<AdminDashboard />}></Route>
         <Route path="/subscription" element={<Subscription />}></Route>
+        <Route path="/subscription-form" element={<SubscriptionForm />}></Route>
       </Routes>
     </BrowserRouter>
     </div>

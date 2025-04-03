@@ -17,7 +17,7 @@ const Subscription = () => {
         `${process.env.REACT_APP_API_URL}/api/V1/sub/subscriptions`
       );
       if (response.data.success) {
-        setSubscriptionsList(response.data.data); // Assuming response structure
+        setSubscriptionsList(response.data.data); 
         console.log(subscriptionsList);
       }
     } catch (error) {
@@ -35,7 +35,7 @@ const Subscription = () => {
   const handleAdd = () => {
     if (!formData.name.trim() || !formData.description.trim()) return;
     setSubscriptions([...subscriptions, { ...formData, id: Date.now() }]);
-    setFormData({ name: "", description: "" });
+    setFormData((prevData) => ({ ...prevData, description: "" }));
   };
 
   const handleDelete = (id) => {
@@ -71,6 +71,7 @@ const Subscription = () => {
         const resData = response.data.data;
         toast.success(response.data.message);
         setSubscriptions([]);
+        setFormData({})
       } else {
         toast.error(response.data.message);
       }
@@ -130,6 +131,7 @@ const Subscription = () => {
         <Button onClick={handleAdd}>Add</Button>
       </div>
 
+      {subscriptions.length > 0 && (
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -159,6 +161,7 @@ const Subscription = () => {
           ))}
         </tbody>
       </Table>
+      )}
 
       {subscriptions.length > 0 && (
         <Button variant="success" onClick={handleFinalSubmit}>
